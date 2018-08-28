@@ -1,4 +1,4 @@
-Visual Studio 2013 solution for gettext-0.19.4 and libiconv-1.14
+Visual Studio 2017 solution for gettext-0.19.4 and libiconv-1.14
 ================================================================
 
 This lets you build libintl (from gettext) and libiconv with Visual Studio 2013.
