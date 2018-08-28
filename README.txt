@@ -1,7 +1,7 @@
 Visual Studio 2017 solution for gettext-0.19.4 and libiconv-1.14
 ================================================================
 
-This lets you build libintl (from gettext) and libiconv with Visual Studio 2013.
+This lets you build libintl (from gettext) and libiconv with Visual Studio 2017.
 (These two libraries are just enough to build Minetest with gettext support.)
 
 Notes:
@@ -14,7 +14,7 @@ Notes:
 
 - None of the utilities (such as xgettext) will be built.
 
-- This has only been tested with Visual Studio Express 2013.
+- This has only been tested with Visual Studio Express 2017.
 
 - 32 bit and 64 bit builds are both supported.
 
@@ -58,7 +58,7 @@ Instructions
        |   `-- (and more...)
        `-- (and more...)
 
-4. Open gettext.sln in Visual Studio 2013.
+4. Open gettext.sln in Visual Studio 2017.
 
 5. Select a configuration (Release or Debug) and a platform (Win32 or x64)
    and click BUILD -> Build Solution.
