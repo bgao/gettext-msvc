@@ -1,0 +1,156 @@
+diff -aur old/gettext-0.21/gettext-runtime/intl/bindtextdom.c new/gettext-0.21/gettext-runtime/intl/bindtextdom.c
+--- old/gettext-0.21/gettext-runtime/intl/bindtextdom.c	2020-06-06 10:03:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/bindtextdom.c	2021-05-27 11:09:08.339562900 -0400
+@@ -26,7 +26,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* Handle multi-threaded applications.  */
+diff -aur old/gettext-0.21/gettext-runtime/intl/dcgettext.c new/gettext-0.21/gettext-runtime/intl/dcgettext.c
+--- old/gettext-0.21/gettext-runtime/intl/dcgettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/dcgettext.c	2021-05-27 11:09:08.361827100 -0400
+@@ -22,7 +22,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* @@ end of prolog @@ */
+diff -aur old/gettext-0.21/gettext-runtime/intl/dcigettext.c new/gettext-0.21/gettext-runtime/intl/dcigettext.c
+--- old/gettext-0.21/gettext-runtime/intl/dcigettext.c	2020-06-06 10:03:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/dcigettext.c	2021-05-27 11:09:08.375673400 -0400
+@@ -97,7 +97,7 @@
+ # ifdef IN_LIBGLOCALE
+ #  include <libintl.h>
+ # endif
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ #include "hash-string.h"
+ 
+diff -aur old/gettext-0.21/gettext-runtime/intl/dcngettext.c new/gettext-0.21/gettext-runtime/intl/dcngettext.c
+--- old/gettext-0.21/gettext-runtime/intl/dcngettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/dcngettext.c	2021-05-27 11:09:08.387886300 -0400
+@@ -22,7 +22,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* @@ end of prolog @@ */
+diff -aur old/gettext-0.21/gettext-runtime/intl/dgettext.c new/gettext-0.21/gettext-runtime/intl/dgettext.c
+--- old/gettext-0.21/gettext-runtime/intl/dgettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/dgettext.c	2021-05-27 11:09:08.417176900 -0400
+@@ -25,7 +25,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* @@ end of prolog @@ */
+diff -aur old/gettext-0.21/gettext-runtime/intl/dngettext.c new/gettext-0.21/gettext-runtime/intl/dngettext.c
+--- old/gettext-0.21/gettext-runtime/intl/dngettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/dngettext.c	2021-05-27 11:09:08.428657400 -0400
+@@ -25,7 +25,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* @@ end of prolog @@ */
+diff -aur old/gettext-0.21/gettext-runtime/intl/finddomain.c new/gettext-0.21/gettext-runtime/intl/finddomain.c
+--- old/gettext-0.21/gettext-runtime/intl/finddomain.c	2020-06-06 10:03:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/finddomain.c	2021-05-27 11:09:08.457175400 -0400
+@@ -32,7 +32,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* Handle multi-threaded applications.  */
+diff -aur old/gettext-0.21/gettext-runtime/intl/gettext.c new/gettext-0.21/gettext-runtime/intl/gettext.c
+--- old/gettext-0.21/gettext-runtime/intl/gettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/gettext.c	2021-05-27 11:09:08.489201100 -0400
+@@ -29,7 +29,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* @@ end of prolog @@ */
+diff -aur old/gettext-0.21/gettext-runtime/intl/gettextP.h new/gettext-0.21/gettext-runtime/intl/gettextP.h
+--- old/gettext-0.21/gettext-runtime/intl/gettextP.h	2020-06-06 10:03:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/gettextP.h	2021-05-27 11:09:08.510429500 -0400
+@@ -68,7 +68,7 @@
+ # undef _INTL_REDIRECT_INLINE
+ # undef _INTL_REDIRECT_MACROS
+ # define _INTL_REDIRECT_MACROS
+-# include "libgnuintl.h"
++# include "libintl.h"
+ # ifdef IN_LIBGLOCALE
+ extern char *gl_dcigettext (const char *__domainname,
+ 			    const char *__msgid1, const char *__msgid2,
+diff -aur old/gettext-0.21/gettext-runtime/intl/ngettext.c new/gettext-0.21/gettext-runtime/intl/ngettext.c
+--- old/gettext-0.21/gettext-runtime/intl/ngettext.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/ngettext.c	2021-05-27 11:09:08.543650000 -0400
+@@ -29,7 +29,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ #include <locale.h>
+diff -aur old/gettext-0.21/gettext-runtime/intl/textdomain.c new/gettext-0.21/gettext-runtime/intl/textdomain.c
+--- old/gettext-0.21/gettext-runtime/intl/textdomain.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/textdomain.c	2021-05-27 11:09:08.568042500 -0400
+@@ -25,7 +25,7 @@
+ #ifdef _LIBC
+ # include <libintl.h>
+ #else
+-# include "libgnuintl.h"
++# include "libintl.h"
+ #endif
+ 
+ /* Handle multi-threaded applications.  */
+diff -aur old/gettext-0.21/gettext-runtime/intl/vasnprintf.c new/gettext-0.21/gettext-runtime/intl/vasnprintf.c
+--- old/gettext-0.21/gettext-runtime/intl/vasnprintf.c	2020-06-06 10:03:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/vasnprintf.c	2021-05-27 10:16:33.773874800 -0400
+@@ -5092,7 +5092,7 @@
+ #else
+                     *fbp++ = 'l';
+ #endif
+-                    FALLTHROUGH;
++                    // FALLTHROUGH;
+                   case TYPE_LONGINT:
+                   case TYPE_ULONGINT:
+ #if HAVE_WINT_T
+diff -aur old/gettext-0.21/gettext-runtime/intl/version.c new/gettext-0.21/gettext-runtime/intl/version.c
+--- old/gettext-0.21/gettext-runtime/intl/version.c	2019-05-11 07:29:32.000000000 -0400
++++ new/gettext-0.21/gettext-runtime/intl/version.c	2021-05-27 11:09:08.595086700 -0400
+@@ -18,7 +18,7 @@
+ # include <config.h>
+ #endif
+ 
+-#include "libgnuintl.h"
++#include "libintl.h"
+ 
+ /* Version number: (major<<16) + (minor<<8) + subminor */
+ int libintl_version = LIBINTL_VERSION;

@@ -1,7 +1,7 @@
-Visual Studio 2017 solution for gettext-0.19.4 and libiconv-1.14
+Visual Studio 2019 solution for gettext-0.21 and libiconv-1.16
 ================================================================
 
-This lets you build libintl (from gettext) and libiconv with Visual Studio 2017.
+This lets you build libintl (from gettext) and libiconv with Visual Studio 2019.
 (These two libraries are just enough to build Minetest with gettext support.)
 
 Notes:
@@ -14,7 +14,7 @@ Notes:
 
 - None of the utilities (such as xgettext) will be built.
 
-- This has only been tested with Visual Studio Express 2017.
+- This has only been tested with Visual Studio Community 2019.
 
 - 32 bit and 64 bit builds are both supported.
 
@@ -24,13 +24,13 @@ Instructions
 
 1. Clone this repository or extract a zipped version of it somewhere.
 
-2. Download gettext-0.19.4.tar.gz from
+2. Download gettext-0.21.tar.gz from
 
-     http://ftp.gnu.org/gnu/gettext/gettext-0.19.4.tar.gz
+     http://ftp.gnu.org/gnu/gettext/gettext-0.21.tar.gz
 
-   and libiconv-1.14.tar.gz from
+   and libiconv-1.16.tar.gz from
 
-     http://ftp.gnu.org/gnu/libiconv/libiconv-1.14.tar.gz
+     http://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
 
 3. Extract them both into the gettext-msvc directory.
    You can use 7-Zip (http://www.7-zip.org/) to extract .tar.gz archives.
@@ -39,7 +39,7 @@ Instructions
 
    gettext-msvc
    |-- gettext.sln
-   |-- gettext-0.19.4
+   |-- gettext-0.21
    |   |-- libintl.vcxproj
    |   |-- config.h
    |   |-- libgnuintl.h
@@ -48,7 +48,7 @@ Instructions
    |   |   |   `-- (lots of source files)
    |   |   `-- (and more...)
    |   `-- (and more...)
-   `-- libiconv-1.14
+   `-- libiconv-1.16
        |-- libiconv.vcxproj
        |-- config.h
        |-- iconv.h
@@ -57,10 +57,12 @@ Instructions
        |   |-- iconv.c
        |   `-- (and more...)
        `-- (and more...)
+	   
+4. Apply gettext.patch: `patch -p1 < gettext.patch`
 
-4. Open gettext.sln in Visual Studio 2017.
+5. Open gettext.sln in Visual Studio 2019.
 
-5. Select a configuration (Release or Debug) and a platform (Win32 or x64)
+6. Select a configuration (Release or Debug) and a platform (Win32 or x64)
    and click BUILD -> Build Solution.
 
 Once this is done, the .dll and .lib files are in one of the following
